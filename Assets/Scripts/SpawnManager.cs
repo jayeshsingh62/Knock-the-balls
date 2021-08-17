@@ -12,8 +12,8 @@ public class SpawnManager : MonoBehaviour
         float spawnPosX = Random.Range(-spawnRange, spawnRange);
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
 
-
-        Instantiate(enemyPrefab, new Vector3(0, 0, 6), transform.rotation);
+        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
+        Instantiate(enemyPrefab, randomPos, transform.rotation);
     }
 
     // Update is called once per frame
