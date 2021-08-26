@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         hasPowerUp = false;
+        currentPowerUp = PowerupType.None;
         powerupIndicator.gameObject.SetActive(false);
     }
 
