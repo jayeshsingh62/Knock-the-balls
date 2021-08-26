@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PowerupType { None, Pushback, Rockets}
+
 public class PowerUp : MonoBehaviour
 {
     // Start is called before the first frame update
