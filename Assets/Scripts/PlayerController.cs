@@ -68,4 +68,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with : " + collision.gameObject.name + " with powerup set to : " + currentPowerUp.ToString()); 
         }
     }
+
+    void LaunchRockets()
+    {
+        foreach(var enemy in FindObjectsOfType<Enemy>())
+        {
+            tmpRocket = Instantiate(rocketPrefab, transform.position + Vector3.up, Quaternion.identity);
+            tmpRocket.GetComponent<RocketBehaviour>().Fire(enemy.transform);
+        }
+    }
 }
