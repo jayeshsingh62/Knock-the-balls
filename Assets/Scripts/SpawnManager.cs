@@ -35,7 +35,7 @@ public class SpawnManager : MonoBehaviour
 
         for(int i=0; i<enemiesToSpawn; i++)
         {
-            Instantiate(enemyPrefab, GenerateSpawnPosition(), transform.rotation);
+            Instantiate(enemyPrefab[enemyIndex], GenerateSpawnPosition(), enemyPrefab[enemyIndex].transform.rotation);
         }
     }
     private Vector3 GenerateSpawnPosition()
