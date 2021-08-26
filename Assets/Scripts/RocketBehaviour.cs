@@ -17,5 +17,10 @@ public class RocketBehaviour : MonoBehaviour
         
     }
 
-
+    public void Fire(Transform newTarget)
+    {
+        target = homingTarget;
+        homing = true;
+        Destroy(gameObject, aliveTimer);
+    }
 }
