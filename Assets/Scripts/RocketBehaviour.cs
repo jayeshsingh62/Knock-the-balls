@@ -14,7 +14,12 @@ public class RocketBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(homing && target != null)
+        {
+            Vector3 moveDirection = (target.transform.position - transform.position).normalized;
+            transform.position += moveDirection * speed * Time.deltaTime;
+            transform.LookAt(target);
+        }
     }
 
     public void Fire(Transform newTarget)
